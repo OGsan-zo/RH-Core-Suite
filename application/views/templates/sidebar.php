@@ -196,5 +196,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1><?php echo $pagetitle;?></h1>
+        <h1><?php echo isset($pagetitle) ? $pagetitle : 'Tableau de bord'; ?></h1>
     </div><!-- End Page Title -->
