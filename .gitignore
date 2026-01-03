@@ -28,3 +28,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 # My Documentation
 my-documentation/ 
+.windsurf/
