@@ -51,6 +51,8 @@ class Home_Controller extends CI_Controller {
 		}
 		elseif ($user->etat == 0) {
 			// Administrateur
+			$data['title'] = 'Tableau de bord Administrateur';
+			$data['pagetitle'] = 'Tableau de bord Administrateur';
 			$data['contents'] = 'home/admin_dashboard_view'; 
 			$this->load->view('templates/template', $data);
 		} elseif ($user->etat == 1) {
@@ -76,6 +78,8 @@ class Home_Controller extends CI_Controller {
 		} 
 		else {
 			// Par défaut (si l'état est inconnu ou invalide)
+			$data['title'] = 'Tableau de bord';
+			$data['pagetitle'] = 'Tableau de bord';
 			$data['contents'] = 'home/default_dashboard_view'; 
 			$this->load->view('templates/template', $data);
 		}
