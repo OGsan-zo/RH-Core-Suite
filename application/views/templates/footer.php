@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
   <div class="copyright">
-    &copy; Copyright <strong><span>ETU002735</span></strong>,<strong><span>ETU002754</span></strong>. All Rights Reserved to Ivo et Ny Antsa
+    &copy; Copyright <strong><span>ETU002772</span></strong>,<strong><span>ETU002769</span></strong>. All Rights Reserved to Ivo et Ny Antsa
   </div>
   <div class="credits">
     <!-- All the links in the footer should remain intact. -->

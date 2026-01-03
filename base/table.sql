@@ -13,9 +13,6 @@
         test_entretien_termine BOOLEAN DEFAULT FALSE
     );
 
-    ALTER TABLE candidat ADD COLUMN test_entretien_termine BOOLEAN DEFAULT FALSE;
-
-
     -- Table des CVs (résumé de chaque candidat)
     CREATE TABLE CV (
         id SERIAL PRIMARY KEY,
@@ -92,7 +89,7 @@
     CREATE TABLE ProfilRequis (
         id SERIAL PRIMARY KEY,
         idPoste INT REFERENCES Poste(id) ON DELETE CASCADE,
-        nomProfil TYPE VARCHAR(255);
+        nomProfil VARCHAR(255),
         description TEXT,
         experienceTechnique INT,
         experienceGenerale INT
@@ -236,7 +233,7 @@ p.nomprofil,
 bt.datebesoin,
 bt.nombredepostes 
 from besoinsEnTalent as bt 
-join profilrequis as p on p.id=bt.idprofile
+join profilrequis as p on p.id=bt.idprofile;
 
 ---
 --liste poste
@@ -248,7 +245,7 @@ b.nombranche,
 p.nomposte,
 p.description
 from poste as p
-join branche as b on b.id = p.idbranche
+join branche as b on b.id = p.idbranche;
 
 ---
 --liste profil requis
@@ -275,3 +272,15 @@ a.datefin
 from annonce as a Left join profilrequis as p on p.id = a.idprofile
 Left join besoinsEnTalent as b on b.id=a.idBesoinEnTalent
 where a.isAnnonce IS FALSE ;
+
+
+-- 
+-- Modification     # Zo 
+-- 
+CREATE TABLE Employe (
+    id SERIAL PRIMARY KEY,
+    idCandidat INT UNIQUE REFERENCES Candidat(id) ON DELETE CASCADE,
+    dateEmbauche DATE DEFAULT CURRENT_DATE,
+    matricule VARCHAR(20) UNIQUE,
+    posteActuel INT REFERENCES Poste(id)
+);
