@@ -198,7 +198,7 @@ JOIN Poste p ON p.id = pr.idPoste
 JOIN Branche b ON b.id = p.idBranche
 WHERE
     bt.isdemande = FALSE
-    AND bt.status = 0;  -- Filtrer uniquement les demandes en attente
+    AND bt.status = '0';  -- Filtrer uniquement les demandes en attente
 
 ---
 -- BESOINS EN TALENT VALIDER PAR RH
@@ -224,7 +224,7 @@ FROM
     JOIN Branche b ON b.id = p.idBranche
     WHERE
         bt.isdemande = true
-        AND bt.status = 1
+        AND bt.status = '1'
         AND NOT EXISTS (
             SELECT 1
             FROM Annonce a

@@ -28,7 +28,7 @@ INSERT INTO Candidat (nom, prenom,motDePasse, adresse, dateNaissance, nationalit
 ('PDG', 'PDG', MD5('1234'), '123 Rue Principale', '1990-05-14', 'Française', 'Pdg@gmail.com', '0385497169',0),
 ('RH', 'RH', MD5('1234'), '123 Rue Principale', '1990-05-14', 'Française', 'Rh@gmail.com', '0123456789',1),
 ('RE', 'Randria', MD5('1234'),  '456 Avenue des Champs', '1985-11-23', 'Française', 'RE@gmail.com', '0987654321',3),
-('RC', 'RC', MD5('1234'), '123 Rue Principale', '1990-05-14', 'Française', 'RC@gmail.com', '0123456789',2),
+('RC', 'RC', MD5('1234'), '123 Rue Principale', '1990-05-14', 'Française', 'RC@gmail.com', '0123456789',2);
 
 INSERT INTO Candidat (nom, prenom, motDePasse, adresse, dateNaissance, nationalite, email, telephone, etat) VALUES 
 ('RATOVONANDRASANA', 'Aina Ny Antsa', MD5('1234'), '123 Rue Principale', '1990-05-14', 'Française', 'antsamadagascar@gmail.com', '0123456789',-1),
@@ -61,5 +61,5 @@ INSERT INTO CV (idCandidat, isValider, dateValidation) VALUES
 (15, FALSE, NULL),
 (16, FALSE, NULL),
 (17, FALSE, NULL),
-(18, FALSE, NULL),
+(18, FALSE, NULL);
 
