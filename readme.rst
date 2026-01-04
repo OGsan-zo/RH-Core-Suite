@@ -1,1 +1,1 @@
-# RH - CORE 
+# RH-CORE 
